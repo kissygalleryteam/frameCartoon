@@ -1,7 +1,7 @@
 {
     "name": "frameCartoon",
     "version": "1.0",
-    "desc": "",
+    "desc": "逐帧动画组件，半透明gif图效果",
     "cover": "",
     "tag":"1.0",
     "author": {
