@@ -6,7 +6,7 @@ frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情�
 * 作者：miaojing
 * demo：[http://gallery.kissyui.com/frameCartoon/1.0/demo/index.html](http://gallery.kissyui.com/frameCartoon/1.0/demo/index.html)
 
-## gif效果，不支持半透明，有锯齿
+## 原gif效果，不支持半透明，有锯齿
 ![小图](http://gtms01.alicdn.com/tps/i1/T1.GD6FjJXXXXhdcQ4-85-126.gif)
 ![大图](http://gtms01.alicdn.com/tps/i1/T1h4Y7FaNXXXa017E0-130-192.gif)
 
@@ -29,15 +29,15 @@ frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情�
          });
     });
 
-## 配置
-+ el: '#J_Walker1', //必填，容器节点
-+ frameHeight: 111, //必填，一帧的高度
-+ frameWidth: 75, //必填，一帧的宽度
-+ frameNum: 8, //必填，总帧数
-+ speed: 150, //可选，帧速 每隔100ms切换一帧，默认150ms，单位毫秒
-+ bg: 'http://gtms03.alicdn.com/tps/i3/T1s8fyFXJdXXX_x8EM-75-889.png', //必填，连续帧合并sprite图
-+ bgpng8: 'http://gtms01.alicdn.com/tps/i1/T1Nb2HFhxaXXX6BmzV-130-1536.png', //可选，默认ie6下用滤镜处理png24半透明，配置bgpng8可选用png8图片降级处理，降级ie6下有锯齿
-+ bgDirection: 'vertical', //可选，帧拼接的方式，默认为水平方向，也支持垂直方向设为vertical
+## 配置说明
++ el: selector 必填，容器节点
++ frameHeight: int 必填，一帧的高度，如 111
++ frameWidth: int 必填，一帧的宽度
++ frameNum: int 必填，总帧数
++ speed: int 可选，帧速 每隔100ms切换一帧，默认150ms，单位毫秒
++ bg: string 必填，连续帧合并sprite图
++ bgpng8: string 可选，默认ie6下用滤镜处理png24半透明，配置bgpng8可选用png8图片降级处理，降级ie6下有锯齿
++ bgDirection: string 可选 帧拼接的方式，默认为水平方向，也支持垂直方向设为vertical
 
 ### 水平方向示意图
 ![水平方向示意图](http://gtms01.alicdn.com/tps/i1/T1Z__SFX4eXXc4x0Tx-1040-192.png)
