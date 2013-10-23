@@ -7,8 +7,8 @@ frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情�
 * demo：[http://gallery.kissyui.com/frameCartoon/1.0/demo/index.html](http://gallery.kissyui.com/frameCartoon/1.0/demo/index.html)
 
 ## gif效果，不支持半透明，有锯齿
-![http://gtms01.alicdn.com/tps/i1/T1.GD6FjJXXXXhdcQ4-85-126.gif]()
-![http://gtms01.alicdn.com/tps/i1/T1h4Y7FaNXXXa017E0-130-192.gif]()
+![小图](http://gtms01.alicdn.com/tps/i1/T1.GD6FjJXXXXhdcQ4-85-126.gif)
+![大图](http://gtms01.alicdn.com/tps/i1/T1h4Y7FaNXXXa017E0-130-192.gif)
 
 ## html部分
 	<div id="J_Walker2">
@@ -40,10 +40,10 @@ frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情�
 + bgDirection: 'vertical', //可选，帧拼接的方式，默认为水平方向，也支持垂直方向设为vertical
 
 ### 水平方向示意图
-![http://gtms01.alicdn.com/tps/i1/T1Z__SFX4eXXc4x0Tx-1040-192.png]()
+![水平方向示意图](http://gtms01.alicdn.com/tps/i1/T1Z__SFX4eXXc4x0Tx-1040-192.png)
 
 ### 垂直方向示意图
-![http://gtms03.alicdn.com/tps/i3/T1s8fyFXJdXXX_x8EM-75-889.png]()
+![垂直方向示意图](http://gtms03.alicdn.com/tps/i3/T1s8fyFXJdXXX_x8EM-75-889.png)
 
 
 ## 方法
