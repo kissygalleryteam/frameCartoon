@@ -9,7 +9,7 @@ KISSY.add(function (S, Node) {
 
     function FrameCartoon(comConfig) {
         var self = this;
-        self.el = S.isPlainObject(comConfig) ? $(comConfig.el) : $(comConfig);
+        self.el = $(comConfig.el);
         //el内部的child span节点
         self._childEl = self.el.one('span');
         self.frameNum = comConfig.frameNum || 8;
