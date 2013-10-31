@@ -3,6 +3,7 @@
  * @author miaojing<miaojing@taobao.com>
  * @module frameCartoon
  **/
+
 KISSY.add(function (S, Node) {
     var EMPTY = '';
     var $ = Node.one;
@@ -25,6 +26,10 @@ KISSY.add(function (S, Node) {
     }
 
     S.augment(FrameCartoon, {
+        /**
+         * [_initStyle 初始化基本样式]
+         * @return 
+         */
         _initStyle: function() {
             var self = this, bgObj;
             if(S.UA.ie < 7) {

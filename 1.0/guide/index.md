@@ -1,6 +1,6 @@
 ## 综述
 
-frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情况下可替代gif，节日logo和活动页面使用场景较多。
+frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情况下可替代gif，一般适用于节日logo和活动页面。
 
 * 版本：1.0
 * 作者：miaojing
@@ -30,14 +30,14 @@ frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情�
     });
 
 ## 配置说明
-+ el: selector 必填，容器节点
-+ frameHeight: int 必填，一帧的高度，如 111
-+ frameWidth: int 必填，一帧的宽度
-+ frameNum: int 必填，总帧数
-+ speed: int 可选，帧速 每隔100ms切换一帧，默认150ms，单位毫秒
-+ bg: string 必填，连续帧合并sprite图
-+ bgpng8: string 可选，默认ie6下用滤镜处理png24半透明，配置bgpng8可选用png8图片降级处理，降级ie6下有锯齿
-+ bgDirection: string 可选 帧拼接的方式，默认为水平方向，也支持垂直方向设为vertical
++ *el*: {string} 【必填】 同```selector```，容器节点
++ *frameHeight*: {Number} 【必填】 一帧的高度，如 111
++ *frameWidth*: {Number} 【必填】一帧的宽度
++ *frameNum*: {Number} 【必填】总帧数
++ *speed*: {Number} 【可选】帧速 每隔100ms切换一帧，默认150ms，单位毫秒
++ *bg*: {String} 【必填】连续帧合并sprite图
++ *bgpng8*: {String} 【可选】默认ie6下用滤镜处理png24半透明，配置bgpng8可选用png8图片降级处理，降级ie6下有锯齿
++ *bgDirection*: {String} 【可选】 帧拼接的方式，默认为水平方向，也支持垂直方向设为vertical
 
 ### 水平方向示意图
 ![水平方向示意图](http://gtms01.alicdn.com/tps/i1/T1Z__SFX4eXXc4x0Tx-1040-192.png)
