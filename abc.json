@@ -1,0 +1,14 @@
+{
+    "name": "frameCartoon",
+    "version": "1.0",
+    "desc": "逐帧动画组件，半透明gif图效果",
+    "cover": "",
+    "tag":"1.0",
+    "author": {
+        "name": "妙净",
+        "email": "miaojing@taobao.com",
+        "page": "https://github.com/miaojing/"
+    },
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
