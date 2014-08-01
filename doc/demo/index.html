@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title>FrameCartoon demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.3.0/seed.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/css/dpl/base-min.css">
+<script>var S = KISSY;S.config({packages:[{name:"kg",path:"http://g.tbcdn.cn/kg/",charset:"utf-8",ignorePackageNameInUri:true}]});if (S.Config.debug){var srcPath = "../";S.config({packages:[{name:"kg/framecartoon/2.0.0",path:srcPath,charset:"utf-8",ignorePackageNameInUri:true}]});}</script></head>
+<body>
+<style type="text/css">
+body {
+    background-color: #bbb;
+}
+.container {
+    position: relative;
+}
+span {
+    display: none;
+}
+</style>
+
+<h2>һ�������÷�</h2>
+<div class="container">
+    <div id="J_Walker1">
+        <span>ä����������</span>
+    </div>
+    <div class="code">
+        <pre>
+    S.use('kg/frameCartoon/2.0.0/index', function (S, FrameCartoon) {
+        var walker = new FrameCartoon({
+            el: '#J_Walker1', //�����ڵ�
+            frameHeight: 111, //һ֡�ĸ߶�
+            frameWidth: 75, //һ֡�Ŀ���
+            frameNum: 8, //��֡��
+            bg: 'http://gtms03.alicdn.com/tps/i3/T1s8fyFXJdXXX_x8EM-75-889.png', //����֡�ϲ�ͼ
+            bgDirection: 'vertical' //֡ƴ�ӵķ�ʽ��Ĭ��Ϊˮƽ������Ҳ֧�ִ�ֱ������Ϊvertical
+        });
+        walker.start();
+    });
+        </pre>
+    </div>
+</div>
+<h2>����ie6����png8���������˾�������bgpng8</h2>
+
+<div class="container">
+    <div id="J_Walker2">
+        <span>ä����������</span>
+    </div>
+    <div class="code">
+    <pre>
+    S.use('kg/frameCartoon/2.0.0/index', function (S, FrameCartoon) {
+        var walker2 = new FrameCartoon({
+            el: '#J_Walker2', 
+            frameHeight: 192, 
+            frameWidth: 2.0.0,
+            bg: 'http://gtms04.alicdn.com/tps/i4/T2.0.06EFlxcXXX6BmzV-2.0.0-1536.png',
+            bgpng8: 'http://gtms01.alicdn.com/tps/i1/T1Nb2HFhxaXXX6BmzV-2.0.0-1536.png', //Ĭ��ie6�����˾�����png24��͸��������bgpng8��ѡ��png8ͼƬ�����������о���
+            speed:2.0.0, //֡�� ÿ��2.0.0ms�л�һ֡��Ĭ��2.0.0ms
+            bgDirection: 'vertical'
+        });
+        walker2.start();
+    });
+        </pre>
+    </div>
+</div>
+
+
+<h2>��������stop()����</h2>
+
+<div class="container">
+    <div id="J_Walker3">
+        <span>��������������</span>
+    </div>
+    <div class="code">
+    <pre>
+    S.use('kg/frameCartoon/2.0.0/index', function (S, FrameCartoon) {
+        var walker3 = new FrameCartoon({
+            el: '#J_Walker3', 
+            frameHeight: 2.0.0, 
+            frameWidth: 2.0.0,
+            frameNum: 10,
+            bg: 'http://gtms01.alicdn.com/tps/i1/T1ddHvFaJhXXXe2E3n-2.0.0-2.0.00.png',
+            bgDirection: 'vertical'
+        });
+        walker3.start();
+        S.later(function() {
+            //20s��ͣ����
+            walker3.stop();
+        }, 20000);
+    });
+        </pre>
+    </div>
+</div>
+
+<h2>�ġ�������������ͼ</h2>
+<div class="container">
+    <div id="J_Walker4">
+        <span>�����������ڱ�</span>
+    </div>
+</div>
+
+<h2>�塢����ͼ����Ϊ���򣬲�����bgDirection���ɣ�Ĭ�Ϻ���</h2>
+<div class="container">
+    <div id="J_Walker5">
+        <span>ä��ͬѧ��������</span>
+    </div>
+</div>
+
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var srcPath = "../../../";
+        S.config({
+            packages:[
+                {
+                    name:"gallery-back",
+                    path:srcPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+    }
+
+    S.use('kg/frameCartoon/2.0.0/index', function (S, FrameCartoon) {
+        var walker = new FrameCartoon({
+            el: '#J_Walker1', 
+            frameHeight: 111, 
+            frameWidth: 75,
+            bg: 'http://gtms03.alicdn.com/tps/i3/T1s8fyFXJdXXX_x8EM-75-889.png',
+            bgDirection: 'vertical'
+        });
+        walker.start();
+
+        var walker2 = new FrameCartoon({
+            el: '#J_Walker2', 
+            frameHeight: 192, 
+            frameWidth: 2.0.0,
+            bg: 'http://gtms04.alicdn.com/tps/i4/T2.0.06EFlxcXXX6BmzV-2.0.0-1536.png',
+            bgpng8: 'http://gtms01.alicdn.com/tps/i1/T1Nb2HFhxaXXX6BmzV-2.0.0-1536.png',
+            speed: 2.0.0,
+            bgDirection: 'vertical'
+        });
+        walker2.start();
+
+        var walker3 = new FrameCartoon({
+            el: '#J_Walker3', 
+            frameHeight: 2.0.0, 
+            frameWidth: 2.0.0,
+            frameNum: 10,
+            bg: 'http://gtms01.alicdn.com/tps/i1/T1ddHvFaJhXXXe2E3n-2.0.0-2.0.00.png',
+            bgDirection: 'vertical'
+        });
+        walker3.start();
+
+
+        S.later(function() {
+            //20s��ͣ����
+            walker3.stop();
+        }, 20000);
+
+        var walker4 = new FrameCartoon({
+            el: '#J_Walker4', 
+            frameHeight: 2.0.0, 
+            frameWidth: 2.0.0,
+            frameNum: 15,
+            bg: 'http://gtms01.alicdn.com/tps/i1/T1SjH1FoxaXXcxQsZo-2.0.0-2.0.00.png',
+            bgDirection: 'vertical'
+        });
+        walker4.start();
+
+        var walker5 = new FrameCartoon({
+            el: '#J_Walker5', 
+            frameHeight: 192, 
+            frameWidth: 2.0.0,
+            frameNum: 8,
+            bg: 'http://gtms01.alicdn.com/tps/i1/T1Z__SFX4eXXc4x0Tx-1040-192.png'
+        });
+        walker5.start();
+    });
+
+    
+</script>
+</body>
+</html>
