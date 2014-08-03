@@ -9,13 +9,14 @@ gallery/frameCartoon/1.0/index
  * @author miaojing<miaojing@taobao.com>
  * @module frameCartoon
  **/
+
 KISSY.add('gallery/frameCartoon/1.0/index',function (S, Node) {
     var EMPTY = '';
     var $ = Node.one;
 
     function FrameCartoon(comConfig) {
         var self = this;
-        self.el = S.isPlainObject(comConfig) ? $(comConfig.el) : $(comConfig);
+        self.el = $(comConfig.el);
         //el内部的child span节点
         self._childEl = self.el.one('span');
         self.frameNum = comConfig.frameNum || 8;
@@ -31,6 +32,10 @@ KISSY.add('gallery/frameCartoon/1.0/index',function (S, Node) {
     }
 
     S.augment(FrameCartoon, {
+        /**
+         * [_initStyle 初始化基本样式]
+         * @return 
+         */
         _initStyle: function() {
             var self = this, bgObj;
             if(S.UA.ie < 7) {
