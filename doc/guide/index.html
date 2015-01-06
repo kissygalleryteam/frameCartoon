@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>frameCartoon</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com-prettify.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.css">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdn.staticfile.org/prettify/r298/prettify.min.js"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" data-config="{combine:true}"></script>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div id="header"><a href="http://docs.kissyui.com/" class="logo">kissy</a>
+      <nav><a href="http://docs.kissyui.com/1.4/docs/html/coms.html">优秀组件推荐</a></nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 bs-docs-sidebar">
+          <ul data-spy="affix" data-offset-top="0" class="nav nav-list bs-docs-sidenav"></ul>
+        </div>
+        <div class="span9 bs-docs-content">
+          <h1 data-id="undefined" class="title">frameCartoon</h1>
+          <p class="author-wrapper"><span>组件有问题？旺旺联系作者：</span><a href="https://github.com/miaojing" target="_blank" data-name="妙净" class="author"><img src="https://avatars.githubusercontent.com/u/1321009?v=2&amp;s=60" alt="妙净"></a><span class="author-name">妙净</span>
+          </p>
+          <div class="common-link"><a href="../demo/index.html" target="_blank" class="demo">示例</a><a href="https://github.com/kissygalleryteam/frameCartoon" target="_blank" class="source">源码</a></div>
+          <p class="com-info"><span class="info-label">View</span><span data-com="frameCartoon" class="J_View">609</span></p>
+          <p class="com-info"><span class="info-label">所属分类</span><a href="http://kpm.taobao.net/list/动画&amp;效果">动画&amp;效果</a><span class="info-label tag-label">组件标签</span><a href="http://kpm.taobao.net/list/tag?tag=动画">动画</a>
+          </p>
+          <p class="com-info"><span class="info-label">kissy版本</span><span>1.4.X</span>
+          </p><h2 id="-">综述</h2>
+<p>frameCartoon是逐帧动画组件，gif图不支持半透明效果，这种情况下可替代gif，节日logo和活动页面使用场景较多。</p>
+<ul>
+<li>版本：2.0.0</li>
+<li>作者：miaojing</li>
+<li>demo：<a href="http://kg.kissyui.com/frameCartoon/2.0.0/demo/index.html">http://kg.kissyui.com/frameCartoon/2.0.0/demo/index.html</a></li>
+</ul>
+<h2 id="-gif-">原gif效果，不支持半透明，有锯齿</h2>
+<p><img src="http://gtms01.alicdn.com/tps/i1/T1.GD6FjJXXXXhdcQ4-85-126.gif" alt="小图">
+<img src="http://gtms01.alicdn.com/tps/i1/T1h4Y7FaNXXXa017E0-2.0.0-192.gif" alt="大图"></p>
+<h2 id="html-">html部分</h2>
+<pre><code>&lt;div id=&quot;J_Walker2&quot;&gt;
+    &lt;span&gt;盲人正在行走，内部这层span不要省哦，语义化+背景附着点&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><h2 id="-">初始化组件</h2>
+<pre><code>S.use(&#39;kg/frameCartoon/2.0.0/index&#39;, function (S, FrameCartoon) {
+     var frameCartoon = new FrameCartoon({
+        el: &#39;#J_Walker1&#39;, //必填，容器节点
+        frameHeight: 111, //必填，一帧的高度
+        frameWidth: 75, //必填，一帧的宽度
+        frameNum: 8, //必填，总帧数
+        bg: &#39;http://gtms03.alicdn.com/tps/i3/T1s8fyFXJdXXX_x8EM-75-889.png&#39;, //必填，连续帧合并sprite图
+        bgDirection: &#39;vertical&#39;, //可选，帧拼接的方式，默认为水平方向，也支持垂直方向设为vertical
+        bgpng8: &#39;http://gtms01.alicdn.com/tps/i1/T1Nb2HFhxaXXX6BmzV-2.0.0-1536.png&#39;, //可选，默认ie6下用滤镜处理png24半透明，配置bgpng8可选用png8图片降级处理，ie6下会有锯齿哦
+        speed: 2.0.0 //可选，帧速 每隔2.0.0ms切换一帧，默认2.0.0ms，单位毫秒
+     });
+});
+</code></pre><h2 id="-">配置说明</h2>
+<ul>
+<li>el: selector 必填，容器节点</li>
+<li>frameHeight: int 必填，一帧的高度，如 111</li>
+<li>frameWidth: int 必填，一帧的宽度</li>
+<li>frameNum: int 必填，总帧数</li>
+<li>speed: int 可选，帧速 每隔2.0.0ms切换一帧，默认2.0.0ms，单位毫秒</li>
+<li>bg: string 必填，连续帧合并sprite图</li>
+<li>bgpng8: string 可选，默认ie6下用滤镜处理png24半透明，配置bgpng8可选用png8图片降级处理，降级ie6下有锯齿</li>
+<li>bgDirection: string 可选 帧拼接的方式，默认为水平方向，也支持垂直方向设为vertical</li>
+</ul>
+<h3 id="-">水平方向示意图</h3>
+<p><img src="http://gtms01.alicdn.com/tps/i1/T1Z__SFX4eXXc4x0Tx-1040-192.png" alt="水平方向示意图"></p>
+<h3 id="-">垂直方向示意图</h3>
+<p><img src="http://gtms03.alicdn.com/tps/i3/T1s8fyFXJdXXX_x8EM-75-889.png" alt="垂直方向示意图"></p>
+<h2 id="-">方法</h2>
+<ul>
+<li>start() 启动逐帧动画</li>
+<li>stop()  停止逐帧动画</li>
+</ul>
+
+          <div style="display:none;"><script type="text/javascript" src="http://tajs.qq.com/stats?sId=36378479" charset="UTF-8"></script></div>
+          <script src="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
